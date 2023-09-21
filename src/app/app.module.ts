@@ -5,13 +5,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { appRoutes } from './routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FeaturesModule } from './features/features.module';
+import { MedOneCommonModule } from './common/medone-common.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
-    BrowserAnimationsModule
+    FeaturesModule,
+    MedOneCommonModule
   ],
   providers: [],
   bootstrap: [AppComponent],
