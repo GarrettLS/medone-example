@@ -4,7 +4,14 @@ import { MoviesListComponent } from './components';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [MoviesListComponent],
-  imports: [CommonModule],
+  declarations: [
+    MoviesListComponent
+  ],
+  imports: [
+    CommonModule
+  ],
+  exports: [
+    MoviesListComponent
+  ]
 })
 export class MoviesModule {}
