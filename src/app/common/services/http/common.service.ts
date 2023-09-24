@@ -1,5 +1,8 @@
 import { environment } from 'src/environments/environment';
 
+/**
+ * Abstract class to keep a standard api pattern
+ */
 export abstract class CommonService {
   readonly uri: string;
 

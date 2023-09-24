@@ -9,6 +9,9 @@ import {
   IResponse
 } from '../../models';
 
+/**
+ * Movies controller service
+ */
 @Injectable({
   providedIn: 'root'
 })

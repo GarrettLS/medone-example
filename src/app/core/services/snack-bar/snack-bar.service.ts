@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MESSAGE_TYPES } from './models';
 
+/**
+ * A wrapper for the Material SnackBar messaging service to keep a common system throughout the application
+ */
 @Injectable({
   providedIn: 'root'
 })

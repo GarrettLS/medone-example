@@ -7,6 +7,9 @@ import {
 } from '../../models';
 import { IActorListDto } from '../../models/actors';
 
+/**
+ * Actors controller service
+ */
 @Injectable({
   providedIn: 'root'
 })

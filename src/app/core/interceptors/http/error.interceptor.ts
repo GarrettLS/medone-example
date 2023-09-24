@@ -5,6 +5,10 @@ import { catchError } from "rxjs/operators";
 import { environment } from 'src/environments/environment';
 import { SnackBarService } from '../../services';
 
+/**
+ * Catches errors from HTTP requests.
+ * Changes what is shown based on environment
+ */
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
   constructor(private snackBar: SnackBarService) {}

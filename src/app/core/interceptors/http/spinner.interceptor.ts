@@ -3,6 +3,9 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import { Observable, finalize } from 'rxjs';
 import { SpinnerService } from '../../services';
 
+/**
+ * Shows and hides the loading spinner during HTTP requests.
+ */
 @Injectable()
 export class SpinnerInterceptor implements HttpInterceptor {
   constructor(private spinnerService: SpinnerService) {}

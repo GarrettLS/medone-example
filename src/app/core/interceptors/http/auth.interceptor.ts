@@ -3,6 +3,9 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor } from '@angular/c
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
+/**
+ * Adds auth token, content-type, and accept type to every http request
+ */
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
