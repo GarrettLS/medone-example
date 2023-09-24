@@ -1,0 +1,32 @@
+<h2 mat-dialog-title>Add Movie</h2>
+<mat-dialog-content>
+  <form [formGroup]="createMovieForm" class="row">
+    <mat-form-field class="col-12">
+      <mat-label>Movie Name</mat-label>
+      <input matInput formControlName="name">
+      <mat-error *ngIf="createMovieForm.get('name')?.hasError('maxlength')">Movie name must be less than 70 characters long.</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <mat-label>Synopsis</mat-label>
+      <textarea matInput formControlName="synopsis"></textarea>
+    </mat-form-field>
+    <mat-form-field class="col-12">
+      <mat-label>Release Date</mat-label>
+      <input matInput [matDatepicker]="picker" readonly formControlName="releaseDate">
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Actors</mat-label>
+      <mat-select formControlName="actorIds" placeholder="Select one or more actors" multiple>
+        <mat-option *ngFor="let actor of actors" [value]="actor.actorId">{{actor.firstName}} {{actor.lastName}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-flat-button color="primary"
+    [disabled]="!createMovieForm.valid"
+    (click)="onClickCreateMovie()">Add</button>
+  <button mat-flat-button mat-dialog-close cdkFocusInitial color="accent">Close</button>
+</mat-dialog-actions>

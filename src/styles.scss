@@ -3,5 +3,31 @@
 @import "bootstrap/scss/bootstrap-grid";
 @import "bootstrap/scss/bootstrap-utilities";
 
-html, body { height: 100%; }
+html, body { height: 100%; background-color: var(--bs-gray-200) }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Custom styling
+mat-form-field {
+  margin-bottom: 10px;
+}
+
+.mat-mdc-snack-bar-container {
+  &.error {
+    --mdc-snackbar-container-color: var(--bs-danger);
+
+    .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+      color: var(--bs-white);
+    }
+  }
+  &.warning {
+    --mdc-snackbar-container-color: var(--bs-warning);
+
+    .mat-mdc-button.mat-mdc-snack-bar-action:not(:disabled) {
+      color: var(--bs-black);
+    }
+
+    .mdc-snackbar__label {
+      color: var(--bs-black);
+    }
+  }
+}

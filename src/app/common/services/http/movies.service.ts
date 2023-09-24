@@ -7,7 +7,7 @@ import {
   IMovieListDto,
   IMovieCreateDto,
   IResponse
-} from '../models';
+} from '../../models';
 
 @Injectable({
   providedIn: 'root'

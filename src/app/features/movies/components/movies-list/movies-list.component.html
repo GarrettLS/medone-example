@@ -1,1 +1,20 @@
-<p>movies works!</p>
+<h1>Movies</h1>
+<h4><b class="sub-header">Christopher Nolan Movies</b></h4>
+<div class="d-flex justify-content-end">
+  <button mat-icon-button color="primary" matTooltip="Add movie" (click)="onClickCreateMovie()"><mat-icon>add_box</mat-icon></button>
+</div>
+
+<ng-template [ngIf]="movies && movies.length" [ngIfElse]="noMovies">
+  <div class="movie-box">
+    <mat-selection-list>
+      <mat-list-item *ngFor="let movie of movies" (click)="onClickMovie(movie.movieId)">
+        <mat-icon matListItemIcon>movie</mat-icon>
+        <div matListItemTitle>{{movie.name}}</div>
+        <div matListItemLine>{{movie.releaseDate | momentDate}}</div>
+      </mat-list-item>
+    </mat-selection-list>
+  </div>
+</ng-template>
+<ng-template #noMovies>
+  No movies found.
+</ng-template>

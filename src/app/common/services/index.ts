@@ -1,3 +1,3 @@
-export * from './common.service';
-export * from './movies.service';
-export * from './actors.service';
+export * from './http/common.service';
+export * from './http/movies.service';
+export * from './http/actors.service';

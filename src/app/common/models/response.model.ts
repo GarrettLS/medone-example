@@ -1,5 +1,5 @@
 export interface IResponse<T> {
-  result: T | string;
+  result: T;
   messages: string[];
   errors: string[];
 }

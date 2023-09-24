@@ -4,8 +4,8 @@ import { CommonService } from './common.service';
 import { Observable } from 'rxjs'
 import {
   IResponse
-} from '../models';
-import { IActorListDto } from '../models/actors';
+} from '../../models';
+import { IActorListDto } from '../../models/actors';
 
 @Injectable({
   providedIn: 'root'
