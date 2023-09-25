@@ -10,7 +10,7 @@
       <mat-list-item *ngFor="let movie of movies" (click)="onClickMovie(movie.movieId)">
         <mat-icon matListItemIcon>movie</mat-icon>
         <div matListItemTitle>{{movie.name}}</div>
-        <div matListItemLine>{{movie.releaseDate | momentDate}}</div>
+        <div matListItemLine>{{movie.releaseDate | amDateFormat:'LL'}}</div>
       </mat-list-item>
     </mat-selection-list>
   </div>

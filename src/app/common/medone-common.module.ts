@@ -2,18 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MomentDatePipe } from './pipes';
-
 @NgModule({
-  declarations: [
-    MomentDatePipe
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     HttpClientModule
   ],
-  exports: [
-    MomentDatePipe
-  ]
+  exports: []
 })
 export class MedOneCommonModule {}
